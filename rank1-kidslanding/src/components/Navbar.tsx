@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../assets/logoHead.png";
 import { Search } from "lucide-react";
 
 export default function Navbar() {
