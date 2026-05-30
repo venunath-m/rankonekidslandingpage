@@ -24,7 +24,7 @@ const features = [
 
 export default function PlayComfort() {
     return (
-        <section className="w-full bg-[#F5F5F5] py-14 md:py-24 lg:py-[110px] overflow-hidden">
+        <section className="w-full bg-[#FFFFFF] py-14 md:py-24 lg:py-[110px] overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* TOP HEADER SECTION */}
@@ -38,11 +38,11 @@ export default function PlayComfort() {
                 </div>
 
                 {/* THE FLUID GRID SYSTEM */}
-                <div className="mt-10 md:mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[24px]">
+                <div className="mt-10 md:mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-[24px]">
                     {features.map((item, i) => (
                         <div
                             key={i}
-                            className="relative overflow-hidden group bg-[#ECECEC] rounded-2xl shadow-sm h-[340px] sm:h-[380px] md:h-[420px] lg:h-[480px] w-full"
+                            className="relative overflow-hidden group bg-[#ECECEC] shadow-sm h-[340px] sm:h-[380px] md:h-[420px] lg:h-[480px] w-full"
                         >
                             {/* RESPONSIVE HERO BACKGROUND IMAGE */}
                             <img
@@ -52,7 +52,7 @@ export default function PlayComfort() {
                             />
 
                             {/* FLOATING TEXT BANNER LABEL */}
-                            <div className="absolute left-4 right-4 bottom-4 bg-white rounded-xl h-[64px] sm:h-[76px] lg:h-[88px] flex items-center px-4 sm:px-[26px] shadow-sm border border-neutral-100">
+                            <div className="absolute left-4 right-4 bottom-4 bg-white  h-[64px] sm:h-[76px] lg:h-[88px] flex items-center px-4 sm:px-[26px] shadow-sm border border-neutral-100">
                                 <span className="uppercase text-black font-black text-sm sm:text-base lg:text-[20px] xl:text-[22px] leading-[120%] tracking-tight block">
                                     {item.title}
                                 </span>

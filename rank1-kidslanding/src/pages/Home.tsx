@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <CategorySection />
       <WhyShop/>
-      <FeaturedCollections/>\
+      <FeaturedCollections/>
       <ValueForMoney/>
       <PlayComfort/>
       <Testimonials/>
-      <StoreSection/>\
+      <StoreSection/>
       <Footer/>
     </div>
   );

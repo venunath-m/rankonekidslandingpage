@@ -120,11 +120,12 @@ export default function Hero() {
                     
                     {/* BUTTON ADAPTIVE WRAPPER */}
                     <div className="mt-4 md:mt-6 flex justify-center">
-                        <div className="p-[3px] md:p-[4px] rounded-[10px] bg-[#DDDDDD]">
-                            <button className="w-[200px] sm:w-[236px] h-[48px] md:h-[56px] bg-black text-white rounded-[6px] text-[15px] md:text-[16px] font-bold uppercase tracking-wider flex items-center justify-center transition-all duration-300 hover:bg-red-500">
-                                Shop Kids Collection
-                            </button>
-                        </div>
+                        
+                        <div className="rounded-[10px] border border-[#DDDDDD] p-1 bg-transparent">
+    <button className="w-[200px] sm:w-[236px] h-[48px] md:h-[56px] bg-black text-white rounded-[6px] text-[15px] md:text-[16px] font-bold uppercase tracking-wider flex items-center justify-center transition-all duration-300 hover:bg-red-500">
+         Shop Kids Collection
+    </button>
+</div>
                     </div>
                 </div>
 

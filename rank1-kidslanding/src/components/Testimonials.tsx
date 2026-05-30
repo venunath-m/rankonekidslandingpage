@@ -1,3 +1,4 @@
+import { useState } from "react";
 import person1 from "../assets/testimonials/person1.jpg";
 import person2 from "../assets/testimonials/person2.jpg";
 import person3 from "../assets/testimonials/person3.jpg";
@@ -30,6 +31,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+    const [activeIndex, setActiveIndex] = useState(0);
     return (
         <section className="w-full bg-[#F5F5F5] py-14 md:py-24 lg:py-[120px] overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,11 +47,11 @@ export default function Testimonials() {
                 </div>
 
                 {/* TESTIMONIAL RESPONSIVE GRID */}
-                <div className="mt-10 md:mt-[80px] grid grid-cols-1 md:grid-cols-3 border-y md:border-x border-neutral-300 divide-y md:divide-y-0 md:divide-x divide-neutral-300">
+                <div className="mt-10 md:mt-[80px] grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
                     {testimonials.map((item, i) => (
                         <div
                             key={i}
-                            className="px-4 sm:px-6 lg:px-[38px] py-8 md:py-[10px] flex flex-col items-center text-center justify-between"
+                            className="bg-[#F5F5F5] border-l border-r border-neutral-300 px-4 sm:px-6 lg:px-[38px] py-8 md:py-10 flex flex-col items-center text-center justify-between"
                         >
                             <div className="flex flex-col items-center w-full">
                                 {/* PROFILE IMAGE */}
@@ -66,11 +68,10 @@ export default function Testimonials() {
                                     {[1, 2, 3, 4, 5].map((star) => (
                                         <span
                                             key={star}
-                                            className={`text-2xl lg:text-[32px] leading-none select-none ${
-                                                star <= item.rating
+                                            className={`text-2xl lg:text-[32px] leading-none select-none ${star <= item.rating
                                                     ? "text-[#FF1E1E]"
                                                     : "text-neutral-300"
-                                            }`}
+                                                }`}
                                         >
                                             ★
                                         </span>
@@ -99,11 +100,35 @@ export default function Testimonials() {
                 {/* BOTTOM NAVIGATION LAYER */}
                 <div className="flex justify-center md:justify-end mt-8 md:mt-[60px]">
                     <div className="flex items-center gap-[18px]">
-                        <button className="uppercase text-neutral-500 text-lg lg:text-[24px] font-bold hover:text-black transition-colors duration-200">
+                        <button
+                            onClick={() =>
+                                setActiveIndex((prev) =>
+                                    prev === 0 ? testimonials.length - 1 : prev - 1
+                                )
+                            }
+                            className="uppercase text-neutral-500 text-lg lg:text-[24px] font-bold hover:text-black transition-colors duration-200"
+                        >
                             Prev
                         </button>
-                        <div className="w-[60px] lg:w-[90px] h-[2px] bg-black" />
-                        <button className="uppercase text-[#FF1E1E] text-lg lg:text-[24px] font-bold hover:opacity-80 transition-opacity duration-200">
+                        <div className="flex items-center ">
+                            {testimonials.map((_, index) => (
+                                <div
+                                    key={index}
+                                    className={`h-[3px] transition-all duration-300 ${activeIndex === index
+                                            ? "w-[40px] bg-black"
+                                            : "w-[18px] bg-neutral-300"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+                        <button
+                            onClick={() =>
+                                setActiveIndex((prev) =>
+                                    prev === testimonials.length - 1 ? 0 : prev + 1
+                                )
+                            }
+                            className="uppercase text-[#FF1E1E] text-lg lg:text-[24px] font-bold hover:opacity-80 transition-opacity duration-200"
+                        >
                             Next
                         </button>
                     </div>

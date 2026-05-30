@@ -16,32 +16,37 @@ export default function StoreSection() {
 
     return (
         <div className="w-full bg-white overflow-hidden">
-            
+
             {/* ==========================================
                 SECTION 1: STORE LOCATOR
                ========================================== */}
             <section className="w-full pt-14 md:pt-24 lg:pt-[120px] pb-10 md:pb-[80px]">
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    
+
                     {/* Header */}
                     <h2 className="uppercase text-black font-black text-[36px] sm:text-[54px] lg:text-[72px] leading-[100%] tracking-tighter">
                         Store Locator
                     </h2>
-                    
+
                     <p className="mt-4 text-neutral-600 text-sm sm:text-base lg:text-[20px] font-medium max-w-[550px] mx-auto leading-relaxed">
                         Prefer shopping in-store?<br />
                         Find your nearest Rank 1 store and explore the collection in person.
                     </p>
 
                     {/* CTA Button */}
-                    <button className="mt-6 sm:mt-[36px] bg-black text-white font-bold text-sm sm:text-base lg:text-[18px] uppercase py-4 lg:py-[18px] px-8 lg:px-[42px] rounded-md hover:bg-[#FF1E1E] transition-colors duration-300 shadow-sm">
-                        Find a Store Near You
-                    </button>
+
+                    <div className="mt-4 md:mt-6 flex justify-center">
+                        <div className="rounded-[10px] border border-[#DDDDDD] p-1 bg-transparent">
+                            <button className="w-[200px] sm:w-[236px] h-[48px] md:h-[56px] bg-black text-white rounded-[6px] text-[15px] md:text-[16px] font-bold uppercase tracking-wider flex items-center justify-center transition-all duration-300 hover:bg-red-500">
+                                Find a Store Near You
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Infinite Right-to-Left Ticker Canvas */}
                 <div className="mt-10 md:mt-[80px] w-full overflow-hidden relative border-t border-b border-neutral-200 py-4 bg-neutral-50">
-                    
+
                     {/* Native CSS Keyframe Injector block for hardware acceleration performance */}
                     <style>{`
                         @keyframes marquee {
@@ -51,7 +56,7 @@ export default function StoreSection() {
                         .animate-marquee {
                             display: flex;
                             width: max-content;
-                            animation: marquee 28s linear infinite;
+                            animation: marquee 8s linear infinite;
                         }
                         .animate-marquee:hover {
                             animation-play-state: paused;
@@ -60,14 +65,14 @@ export default function StoreSection() {
 
                     <div className="animate-marquee gap-4 md:gap-[24px]">
                         {rollingStores.map((store, index) => (
-                            <div 
-                                key={index} 
-                                className="relative w-[280px] sm:w-[360px] md:w-[440px] h-[380px] sm:h-[480px] md:h-[580px] flex-shrink-0 overflow-hidden rounded-2xl group select-none shadow-sm"
+                            <div
+                                key={index}
+                                className="relative w-[280px] sm:w-[360px] md:w-[440px] h-[380px] sm:h-[480px] md:h-[580px] flex-shrink-0 overflow-hidden  group select-none shadow-sm"
                             >
                                 {/* Store Image Layout */}
-                                <img 
-                                    src={store.img} 
-                                    alt="Rank 1 Store Interior Showcase" 
+                                <img
+                                    src={store.img}
+                                    alt="Rank 1 Store Interior Showcase"
                                     className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]"
                                     draggable="false"
                                 />
@@ -94,32 +99,35 @@ export default function StoreSection() {
                 SECTION 2: KIDS COLLECTION HERO BANNER
                ========================================== */}
             <section className="w-full h-[460px] sm:h-[580px] md:h-[660px] lg:h-[720px] relative flex items-center justify-center overflow-hidden">
-                
+
                 {/* Background Art Canvas Wrapper */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-black/35 z-10" />
-                    <img 
-                        src={kidsHeroImg} 
-                        alt="Dress Your Little Ones Banner Backdrop" 
-                        className="w-full h-full object-cover"
+                    <img
+                        src={kidsHeroImg}
+                        alt="Dress Your Little Ones Banner Backdrop"
+                        className="w-full h-full object-cover scale-105 transform-gpu will-change-transform"
                     />
+
+                    <div className="absolute inset-0 bg-black/25 z-10" />
                 </div>
 
                 {/* Typography Container Box */}
                 <div className="relative z-20 text-center max-w-[1000px] px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-                    
+
                     {/* Responsive Primary Heading */}
-                    <h1 className="text-white font-black uppercase text-[32px] sm:text-[52px] md:text-[64px] lg:text-[76px] leading-[105%] tracking-tighter drop-shadow-lg">
+                    <h1 className="text-white whitespace-nowrap font-bold uppercase text-center text-[46px] leading-[100%] tracking-[-0.05em] font-sans drop-shadow-lg">
                         Dress your little ones in<br className="hidden sm:inline" /> styles they’ll love.
                     </h1>
 
                     {/* Primary Interactive CTA */}
-                    <button className="mt-8 sm:mt-[42px] bg-black text-white font-bold text-sm sm:text-base lg:text-[18px] uppercase py-[16px] sm:py-[20px] px-8 sm:px-[48px] rounded-md border border-transparent hover:bg-white hover:text-black hover:scale-[1.02] transition-all duration-300 shadow-xl">
-                        Shop Kids Collection Now
-                    </button>
 
+                    <div className="rounded-[10px] border border-[#DDDDDD] p-1 bg-transparent">
+                        <button className="w-[280px] sm:w-[320px] h-[48px] md:h-[56px] bg-black text-white rounded-[6px] text-[14px] md:text-[16px] font-bold uppercase tracking-wider flex items-center justify-center whitespace-nowrap transition-all duration-300 hover:bg-red-500">
+                            Shop Kids Collection Now
+                        </button>
+                    </div>
                     {/* Secondary Subtext Accent Link */}
-                    <button className="mt-5 sm:mt-[28px] text-white font-bold text-xs sm:text-sm lg:text-[16px] uppercase tracking-widest border-b-2 border-white/80 pb-1 hover:text-red-400 hover:border-red-400 transition-all duration-300">
+                    <button className="mt-5 sm:mt-[28px] text-white font-bold text-xs sm:text-sm lg:text-[16px] uppercase tracking-widest border-b-2 border-transparent pb-1 hover:border-white hover:text-red-400 transition-all duration-300">
                         Explore Cute New Styles
                     </button>
                 </div>

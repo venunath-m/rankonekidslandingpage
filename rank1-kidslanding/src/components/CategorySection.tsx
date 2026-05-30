@@ -22,7 +22,7 @@ export default function CategorySection() {
     ];
 
     return (
-        <section className="w-full py-12 md:py-20 bg-[#F9F9F9]">
+        <section className="w-full py-12 md:py-20 bg-[#FFFFFF]">
 
             {/* TITLE CONTAINER */}
             <div className="text-center mb-8 md:mb-14 px-4">
@@ -45,7 +45,7 @@ export default function CategorySection() {
                     <div
                         key={i}
                         className={`
-                            group relative rounded-xl overflow-hidden bg-white shadow-sm
+                            group relative overflow-hidden bg-white shadow-sm
                             border border-neutral-100 transition-all duration-300 
                             hover:-translate-y-2 hover:shadow-xl cursor-pointer w-full flex flex-col
                             ${i === 2 ? "sm:col-span-2 lg:col-span-1" : ""} 
@@ -73,8 +73,8 @@ export default function CategorySection() {
                         </div>
 
                         {/* TEXT PACKAGING FOOTER */}
-                        <div className="p-5 md:p-6 flex-grow flex items-center justify-center bg-white border-t border-neutral-50">
-                            <h3 className="text-sm sm:text-base lg:text-[17px] font-black text-gray-900 tracking-wide text-center leading-[135%] uppercase max-w-[280px] mx-auto">
+                        <div className="p-5 md:p-6 flex-grow flex items-center white justify-center bg-white border-t border-neutral-50">
+                            <h3 className="text-sm sm:text-base lg:text-[14px] font-black text-gray-900 tracking-wide text-center leading-[135%] uppercase max-w-[280px] mx-auto">
                                 {item.title}
                             </h3>
                         </div>
