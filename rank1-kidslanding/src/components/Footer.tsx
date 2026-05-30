@@ -1,4 +1,4 @@
-import React from "react";
+
 import logoFoot from "../assets/logoFoot.png";
 export default function Footer() {
     return (
