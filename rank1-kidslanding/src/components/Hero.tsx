@@ -88,7 +88,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="w-full flex flex-col items-center pt-8 md:pt-16 pb-12 relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-white">
+        <section className="w-full flex flex-col items-center pt-12 md:pt-16 pb-12 relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-white">
             
             {/* BACKGROUND INFRASTRUCTURE */}
             <div className="absolute inset-0 z-0 overflow-hidden">
